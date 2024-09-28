@@ -10,7 +10,6 @@ WORKDIR /app
 
 # Copy package.json and pnpm-lock.yaml (if using pnpm)
 COPY package.json ./
-COPY package-lock.json ./
 # COPY pnpm-lock.yaml ./   # Uncomment if using pnpm
 RUN npm install
 # Or use pnpm if configured
