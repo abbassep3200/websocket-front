@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: websocket
+    build:
+      context: /opt/courses/websocket/websocket-front
+      dockerfile: Dockerfile
+    expose:
+      - '3000'
+    networks:
+      - webnet
+    environment:
+      NODE_ENV: production
+
+networks:
+  webnet:
+    driver: bridge
